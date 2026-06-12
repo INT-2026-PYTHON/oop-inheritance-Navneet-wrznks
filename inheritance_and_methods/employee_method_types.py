@@ -115,7 +115,8 @@ class Employee:
     def from_string(cls, csv_line):
         name, salary_str = csv_line.split(",")
         return cls(name, float(salary_str))
-
+       
+    @staticmethod
     def is_valid_salary(amount):
         return isinstance(amount, (int, float)) and amount > 0
 #Driver code
